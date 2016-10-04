@@ -10,6 +10,8 @@ import java.util.Set;
  */
 public final class Lang{
 
+    private final static Set<Lang> LANGS = new HashSet<>();
+
     public final static Lang MONTH_JANUARY = new Lang("Month.January");
     public final static Lang MONTH_FEBRUARY = new Lang("Month.February");
     public final static Lang MONTH_MARCH = new Lang("Month.March");
@@ -32,8 +34,6 @@ public final class Lang{
     public final static Lang WEEK_SATURDAY = new Lang("Week.Saturday");
 
     private final static String FILENAME_DEFAULT = "pt-br.lang";
-
-    private final static Set<Lang> LANGS = new HashSet<>();
 
     static{
         loadLang(Lang.class.getResourceAsStream(FILENAME_DEFAULT));
